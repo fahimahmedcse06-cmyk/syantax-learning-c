@@ -1,27 +1,17 @@
 #include <stdio.h>
 
-int factorial(int n);
+int main() {
+    int arr[5] = {10, 20, 30, 40, 50};
+    int *p = arr;
 
-int main()
-{
-    int num = 5;
-    int result;
+    printf("arr[0]: %d\n", arr[0]);
+    printf("*p: %d\n", *p);
 
-    result = factorial(num);
+    printf("arr[2]: %d\n", arr[2]);
+    printf("*(p+2): %d\n", *(p + 2));
 
-    printf("Factorial of %d is %d\n", num, result);
+    printf("Address of arr[0]: %p\n", &arr[0]);
+    printf("Value of arr: %p\n", arr);
 
     return 0;
-}
-
-int factorial(int n)
-{
-    if (n == 0 || n == 1)
-    {
-        return 1;
-    }
-    else
-    {
-        return n * factorial(n - 1);
-    }
 }
